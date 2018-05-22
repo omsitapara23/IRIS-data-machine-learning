@@ -9,5 +9,8 @@ Optimiser : Adam
 Layers : 3 => 4 - 7 - 3
 
 Layer1 : relu
+
 Layer2 : sigmoid
+
+Loss : binary_crossentropy
 
