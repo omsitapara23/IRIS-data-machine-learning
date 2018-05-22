@@ -12,5 +12,5 @@ Layer1 : relu
 
 Layer2 : sigmoid
 
-Loss : binary_crossentropy
+Loss : categorical_crossentropy
 
