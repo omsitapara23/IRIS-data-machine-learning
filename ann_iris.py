@@ -48,7 +48,7 @@ classifier.add(Dense(output_dim = 7, init = 'uniform', activation = 'relu', inpu
 classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'sigmoid'))
 
 # Compiling the ANN
-classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+classifier.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 
 # Fitting the ANN to the Training set
 classifier.fit(X_train, y_train, batch_size = 1, nb_epoch = 100)
