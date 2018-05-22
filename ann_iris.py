@@ -51,7 +51,7 @@ classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'sigmoid'))
 classifier.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 
 # Fitting the ANN to the Training set
-classifier.fit(X_train, y_train, batch_size = 1, nb_epoch = 100)
+classifier.fit(X_train, y_train, batch_size = 1, nb_epoch = 25)
 
 
 y_pred = classifier.predict(X_test)
