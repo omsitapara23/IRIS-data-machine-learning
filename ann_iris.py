@@ -39,25 +39,27 @@ from keras.layers import Dense
 classifier = Sequential()
 
 # Adding the input layer and the first hidden layer
-classifier.add(Dense(output_dim = 7, init = 'uniform', activation = 'relu', input_dim = 4))
+classifier.add(Dense(output_dim = 8, init = 'uniform', activation = 'relu', input_dim = 4))
 
 # Adding the second hidden layer
-#classifier.add(Dense(output_dim = 21, init = 'uniform', activation = 'sigmoid'))
+#classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'relu'))
 
 # Adding the output layer
-classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'sigmoid'))
+classifier.add(Dense(output_dim = 3, init = 'uniform', activation = 'softmax'))
 
 # Compiling the ANN
 classifier.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 
 # Fitting the ANN to the Training set
-classifier.fit(X_train, y_train, batch_size = 1, nb_epoch = 25)
+classifier.fit(X_train, y_train, batch_size = 1, nb_epoch = 150)
 
 
 y_pred = classifier.predict(X_test)
 
 y_tester = (y_test > 0.5)
 y_pred = (y_pred > 0.5)
+
+
 
 
 
