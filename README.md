@@ -10,7 +10,7 @@ Layers : 3 => 4 - 7 - 3
 
 Layer1 : relu
 
-Layer2 : sigmoid
+Layer2 : softmax
 
 Loss : categorical_crossentropy
 
